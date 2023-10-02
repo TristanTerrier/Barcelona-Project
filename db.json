@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "can 1",
+            "description": "can 1",
+            "price": 20,
+            "img": "zheic.jpg"
+        },
+        {
+            "id": 2,
+            "name": "can 2",
+            "description": "can 2",
+            "price": 20,
+            "img": "zheic.jpg"
+        },
+        {
+            "id": 3,
+            "name": "can 3",
+            "description": "can 3",
+            "price": 20,
+            "img": "zheic.jpg"
+        },
+        {
+            "id": 4,
+            "name": "can 4",
+            "description": "can 4",
+            "price": 20,
+            "img": "zheic.jpg"
+        },
+        {
+            "id": 5,
+            "name": "can 5",
+            "description": "can 5",
+            "price": 20,
+            "img": "zheic.jpg"
+        },
+        {
+            "id": 6,
+            "name": "can 6",
+            "description": "can 6",
+            "price": 20,
+            "img": "zheic.jpg"
+        }
+    ]
+}
