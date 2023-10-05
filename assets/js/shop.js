@@ -6,11 +6,13 @@ ProductsTable.findAll().then((data) => {
     const productsContainer = document.querySelector('#products-container')
     data.forEach((product) => {
         productsContainer.innerHTML += `
-        <a href="./product.html?id=${product.id}" class="product">
+        <a href="./product.html?id=${product.id}" class="product grid">
             <img src="./assets/img/${product.img}" alt="product image" />
-            <h2>${product.name}</h2>
+            <div class="product-header">
+                <h2>${product.name}</h2>
+                <p>${product.price} €</p>
+            </div>
             <p>${product.description}</p>
-            <p>${product.price}</p>
         </a>
         `
     })

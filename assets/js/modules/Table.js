@@ -14,7 +14,9 @@ export class Table {
     async findOneBy(key, value) {
         const data = await fetch(
             `${this.base_url}/${this.table_name}?${key}=${value}`
-        ).then((response) => response.json())
+        )
+            .then((response) => response.json())
+            .then((data) => data[0])
         return data
     }
 }

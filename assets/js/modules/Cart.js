@@ -1,63 +1,62 @@
 export class Cart {
     constructor() {
-        // Initialiser le panier avec un tableau vide
-        this.articles = JSON.parse(localStorage.getItem('cart')) || []
+        this.items = JSON.parse(localStorage.getItem('cart')) || []
+        this.cart_icon = document.querySelector('.cart-icon > .number_in_cart')
     }
 
-    sauvegarderPanier() {
-        localStorage.setItem('cart', JSON.stringify(this.articles))
-    }
-
-    // Ajouter un produit au panier
-    ajouterProduit(produit, quantite) {
-        // Vérifier si le produit est déjà dans le panier
-        const articleExistant = this.articles.find(
-            (article) => article.produit.id === produit.id
+    addItem(productId, quantity) {
+        const existingItemIndex = this.items.findIndex(
+            (item) => item.id === productId
         )
 
-        if (articleExistant) {
-            // Si le produit existe déjà, mettre à jour la quantité
-            articleExistant.quantite += quantite
+        if (existingItemIndex !== -1) {
+            this.items[existingItemIndex].quantity += quantity
         } else {
-            // Si le produit n'existe pas, l'ajouter au panier
-            this.articles.push({ produit, quantite })
+            this.items.push({ id: productId, quantity })
         }
-        this.sauvegarderPanier()
+
+        this.saveCart()
     }
 
-    // Supprimer un produit du panier
-    supprimerProduit(produitId) {
-        this.articles = this.articles.filter(
-            (article) => article.produit.id !== produitId
-        )
-        this.sauvegarderPanier()
-    }
-
-    // Modifier la quantité d'un produit dans le panier
-    modifierQuantite(produitId, nouvelleQuantite) {
-        const article = this.articles.find(
-            (article) => article.produit.id === produitId
-        )
-
-        if (article) {
-            article.quantite = nouvelleQuantite
+    removeItem(productId) {
+        const itemIndex = this.items.findIndex((item) => item.id === productId)
+        if (itemIndex !== -1) {
+            this.items.splice(itemIndex, 1)
+            this.saveCart()
         }
-        this.sauvegarderPanier()
     }
 
-    // Obtenir le contenu complet du panier
-    getContenuPanier() {
-        return this.articles
+    updateQuantity(productId, newQuantity) {
+        const item = this.items.find(
+            (item) => item.product && item.product.id === productId
+        )
+
+        if (item) {
+            item.quantity = newQuantity
+            this.saveCart()
+        }
     }
 
-    // Calculer le total du panier
-    calculerTotalPanier() {
-        let total = 0
+    getItems() {
+        this.saveCart()
+        return this.items
+    }
 
-        this.articles.forEach((article) => {
-            total += article.produit.prix * article.quantite
+    getLenCart() {
+        var n = 0
+        this.items.forEach((item) => {
+            n += item.quantity
         })
+        return n
+    }
 
-        return total
+    saveCart() {
+        localStorage.setItem('cart', JSON.stringify(this.items))
+        this.cart_icon.innerHTML = this.getLenCart()
+    }
+
+    clearCart() {
+        this.items = []
+        this.saveCart()
     }
 }
