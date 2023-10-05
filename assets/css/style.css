@@ -235,3 +235,37 @@ section.grid {
 #cart-container {
     gap: 50px;
 }
+
+.checkout-container {
+    height: fit-content;
+}
+
+.product-cart {
+    justify-items: end;
+    grid-template-columns: 1fr 2fr;
+}
+
+.product-cart > img {
+    grid-row: 1/4;
+    grid-column: 1;
+    object-fit: contain;
+}
+
+.product-cart-header {
+    grid-column: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-cart-header > p {
+    font-weight: 500;
+}
+
+.product-total {
+    grid-column: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

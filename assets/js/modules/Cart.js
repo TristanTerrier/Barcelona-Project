@@ -2,37 +2,28 @@ export class Cart {
     constructor() {
         this.items = JSON.parse(localStorage.getItem('cart')) || []
         this.cart_icon = document.querySelector('.cart-icon > .number_in_cart')
+        console.log(this.items)
     }
 
-    addItem(productId, quantity) {
-        const existingItemIndex = this.items.findIndex(
-            (item) => item.id === productId
+    addItem(product, quantity) {
+        const item = this.items.find(
+            (item) => item.product && item.product.id === product.id
         )
-
-        if (existingItemIndex !== -1) {
-            this.items[existingItemIndex].quantity += quantity
+        if (item) {
+            item.quantity += quantity
         } else {
-            this.items.push({ id: productId, quantity })
+            this.items.push({ product, quantity })
         }
-
         this.saveCart()
     }
 
-    removeItem(productId) {
-        const itemIndex = this.items.findIndex((item) => item.id === productId)
-        if (itemIndex !== -1) {
-            this.items.splice(itemIndex, 1)
-            this.saveCart()
-        }
-    }
-
-    updateQuantity(productId, newQuantity) {
-        const item = this.items.find(
-            (item) => item.product && item.product.id === productId
-        )
-
-        if (item) {
-            item.quantity = newQuantity
+    removeItem(product) {
+        const item = this.items.find((item, i) => {
+            item.product && item.product.id === product.id
+            return i
+        })
+        if (item !== -1) {
+            this.items.splice(item, 1)
             this.saveCart()
         }
     }
@@ -42,7 +33,7 @@ export class Cart {
         return this.items
     }
 
-    getLenCart() {
+    getLenItems() {
         var n = 0
         this.items.forEach((item) => {
             n += item.quantity
@@ -50,9 +41,30 @@ export class Cart {
         return n
     }
 
+    setNumber() {
+        var n = this.getLenItems()
+        this.cart_icon.innerHTML = n
+        return n
+    }
+
+    getTotal() {
+        var n = 0
+        this.items.forEach((item) => {
+            n += item.product.price * item.quantity
+        })
+        return n
+    }
+
+    setCheckout() {
+        const numberOfItems = document.querySelector('.number_of_item')
+        const totalElt = document.querySelector('.total')
+        numberOfItems.innerHTML = 'Number of item : ' + this.getLenItems()
+        totalElt.innerHTML = 'Total : ' + this.getTotal()
+    }
+
     saveCart() {
         localStorage.setItem('cart', JSON.stringify(this.items))
-        this.cart_icon.innerHTML = this.getLenCart()
+        this.setNumber()
     }
 
     clearCart() {
