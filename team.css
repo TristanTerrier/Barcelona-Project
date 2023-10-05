@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Header */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+li, .nav_link, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 5%;
+    border-bottom:solid 5px #f9004d;
+    background-color: #24252a;
+}
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    color: #edf0f1;
+}
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover {
+    color: #f9004d;
+}
+.cta button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    color: white;
+    background-color: #f9004d;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: transparent;
+    border: 2px solid #f9004d;
+}
+
+/* Fin Header */
+
+/* Tête de Page */
+
+
+.titre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('https://c8.alamy.com/compfr/2hx49ph/hacker-voler-des-donnees-donnees-numeriques-abstraites-sur-fond-d-ecran-noir-concept-de-cyber-securite-du-systeme-en-attaque-ecran-d-ordinateur-avec-hac-2hx49ph.jpg');
+    background-size: cover;
+    color: #edf0f1;
+    padding: 40px;
+    border-bottom:solid 5px #f9004d;
+}
+.titre h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    background: none;
+}
+.titre h4{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #edf0f1;
+    background: none;
+}
+.titre button{
+    padding: 10px 20px;
+    background-color: #f9004d;
+    color: #edf0f1;
+    border:none;
+    outline:none;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.titre button:hover {
+    background-color: #ca0342;
+}
+
+/* Fin Tête de Page */
+
+
+/* debut */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap');
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins",sans-serif;
+}
+.main
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   min-height: 100vh;
+   width: 100%;
+   background: radial-gradient(#777,#222);
+}
+.card
+{
+   position: relative;
+   width: 340px;
+   height: 450px;
+   background: #fff;
+   overflow: hidden;
+   border-radius: 10px;
+   margin: 20px;
+}
+.card .circle
+{
+   position: absolute;
+   top: -190px;
+   left: 50%;
+   width: 500px;
+   height: 500px;
+   transform: translateX(-50%);
+   clip-path: circle();
+}
+.card .circle::before
+{
+   content: '';
+   position: absolute;
+   top: -8px;
+   left: -16px;
+   width: 100%;
+   height: 100%;
+   box-shadow: 0 0 0 20px #ce1953;
+   border-radius: 50%;
+   z-index: 2;
+   pointer-events: none;
+}
+.circle .imgBox
+{
+   position: absolute;
+   left: 50%;
+   bottom: 0;
+   transform: translateX(-50%);
+   width: 340px;
+   height: 310px;
+}
+.imgBox img
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   transition: all 0.5s;
+}
+.imgBox img:hover
+{
+   transform: scale(1.2);
+}
+.card .content
+{
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 140px;
+   padding: 20px 30px;
+}
+.content .fa-linkedin
+{
+   padding: 2px 4px;
+   color: #fff;
+   background: #0077b5;
+   border-radius: 2px;
+}
+.content h3
+{
+   font-size: 1.4em;
+   color: #333;
+   margin-top: 7px;
+   margin-bottom: 2px;
+}
+.content .textIcon
+{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+.content .textIcon h4
+{
+   color: #f9004d;
+   font-weight: 400;
+}
+.content .textIcon .fa-arrow-right
+{
+   color: #f9004d;
+}
+
+/* fin */
+
+/* Pied de page */
+footer {
+    border-top: 5px solid #f9004d;
+    background-color: #000;
+    padding: 30px;
+    color: #f9004d;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+  footer .social-media{
+    display: flex;
+  }
+  footer .social-media p{
+    margin-right: 15px;
+    border: 1px solid #f9004d;
+    border-radius: 100%;
+    padding: 5px;
+    text-align:center;
+    width: 30px;
+    cursor:pointer;
+  }
+i {
+    color: #f9004d;
+}
+
+  /* Fin du pied de page */
