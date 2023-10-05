@@ -1,254 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="OurTeam.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Test navbar</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="../HomePage/HomePage.html">The danger of the web</a></h1>
+        <nav>
+            <ul class="nav_links">
+                <li><a class="nav_link" href="../Cyberharcelement/Cyberharcelement.html">Cyberharcelement</a></li>
+                <li><a class="nav_link" href="../OurServices/OurServices.html">Our Services</a></li>
+                <li><a class="nav_link" href="../OurTeam/OurTeam.html">Our Team</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="../Shop/Shop.html"><button>Shop</button></a>
+    </header>
 
-/* Header */
+    <div class="titre">
+        <h1>The dangerousness of the web</h1>
+        <h4>What to look out for</h4>
+        <a href="../DangerInWeb/DangerInWeb.html"><button>Parcourir</button></a>
+    </div>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+<section class="main">
+    <div class="card">
+        <div class="circle">
+            <div class="imgBox">
+<img src="https://static.wixstatic.com/media/ad88c6_8f688607d4dc4083918b7db095425b8b~mv2.jpeg/v1/crop/x_0,y_348,w_3024,h_3336/fill/w_426,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_0468%202.jpeg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <a href="https://gb.linkedin.com/">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <h3>Florian DIMBERT</h3>
+            <div class="textIcon">
+                <h4>Developer web</h4>
+                <a href="https://gb.linkedin.com/">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="circle">
+            <div class="imgBox">
+                <img src="https://static.wixstatic.com/media/ad88c6_95e6d656ccc14b2c98efe4ef418e6354~mv2.jpeg/v1/crop/x_0,y_348,w_3024,h_3336/fill/w_426,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_0464%202.jpeg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <a href="https://gb.linkedin.com/">
+<i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <h3>Romain DELAPORTE</h3>
+            <div class="textIcon">
+                <h4>Developer web</h4>
+                <a href="#">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="circle">
+            <div class="imgBox">
+                <img src="https://static.wixstatic.com/media/ad88c6_0e693fd9ce1e4a82b20cee301989e7d3~mv2.jpeg/v1/crop/x_0,y_348,w_3024,h_3336/fill/w_426,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_0471%202.jpeg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <a href="#">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <h3>Tristan TERRIER</h3>
+            <div class="textIcon">
+                <h4>Developer web</h4>
+                <a href="#">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    </section>
     
-}
-li, .nav_link, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-}
-a {
-    color: white;
-    text-decoration: none;
-}
-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 5%;
-    border-bottom:solid 5px #f9004d;
-    background-color: #24252a;
-}
-.logo {
-    cursor: pointer;
-    margin-right: auto;
-    color: #edf0f1;
-}
-.nav_links {
-    list-style: none;
-}
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-}
-.nav_links li a:hover {
-    color: #f9004d;
-}
-.cta button{
-    margin-left: 20px;
-    padding: 9px 25px;
-    color: white;
-    background-color: #f9004d;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-button:hover {
-    background-color: transparent;
-    border: 2px solid #f9004d;
-}
+     <!-- Pied de page -->
+  <footer>
+    <p>&copy; Contact us at 06 98 87 82 00</p>
+    <div class="social-media">
+        <p><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></p>
+        <p><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></p>
+        <p><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></p>
+        <p><a href="https://gb.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></p>
+    </div>
+  </footer>
+  <!-- Fin du pied de page -->
 
-/* Fin Header */
-
-/* Tête de Page */
-
-
-.titre{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: url('https://c8.alamy.com/compfr/2hx49ph/hacker-voler-des-donnees-donnees-numeriques-abstraites-sur-fond-d-ecran-noir-concept-de-cyber-securite-du-systeme-en-attaque-ecran-d-ordinateur-avec-hac-2hx49ph.jpg');
-    background-size: cover;
-    color: #edf0f1;
-    padding: 40px;
-    border-bottom:solid 5px #f9004d;
-}
-.titre h1{
-    font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    background: none;
-}
-.titre h4{
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    text-align: center;
-    border-bottom: 1px solid #edf0f1;
-    background: none;
-}
-.titre button{
-    padding: 10px 20px;
-    background-color: #f9004d;
-    color: #edf0f1;
-    border:none;
-    outline:none;
-    font-size: 20px;
-    font-family: 'Playfair Display', serif;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-.titre button:hover {
-    background-color: #ca0342;
-}
-
-/* Fin Tête de Page */
-
-
-/* debut */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap');
-*
-{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: "Poppins",sans-serif;
-}
-.main
-{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   min-height: 100vh;
-   width: 100%;
-   background: radial-gradient(#777,#222);
-}
-.card
-{
-   position: relative;
-   width: 340px;
-   height: 450px;
-   background: #fff;
-   overflow: hidden;
-   border-radius: 10px;
-   margin: 20px;
-}
-.card .circle
-{
-   position: absolute;
-   top: -190px;
-   left: 50%;
-   width: 500px;
-   height: 500px;
-   transform: translateX(-50%);
-   clip-path: circle();
-}
-.card .circle::before
-{
-   content: '';
-   position: absolute;
-   top: -8px;
-   left: -16px;
-   width: 100%;
-   height: 100%;
-   box-shadow: 0 0 0 20px #ce1953;
-   border-radius: 50%;
-   z-index: 2;
-   pointer-events: none;
-}
-.circle .imgBox
-{
-   position: absolute;
-   left: 50%;
-   bottom: 0;
-   transform: translateX(-50%);
-   width: 340px;
-   height: 310px;
-}
-.imgBox img
-{
-   position: absolute;
-   top: 0;
-   left: 0;
-   object-fit: cover;
-   width: 100%;
-   height: 100%;
-   transition: all 0.5s;
-}
-.imgBox img:hover
-{
-   transform: scale(1.2);
-}
-.card .content
-{
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 140px;
-   padding: 20px 30px;
-}
-.content .fa-linkedin
-{
-   padding: 2px 4px;
-   color: #fff;
-   background: #0077b5;
-   border-radius: 2px;
-}
-.content h3
-{
-   font-size: 1.4em;
-   color: #333;
-   margin-top: 7px;
-   margin-bottom: 2px;
-}
-.content .textIcon
-{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-}
-.content .textIcon h4
-{
-   color: #f9004d;
-   font-weight: 400;
-}
-.content .textIcon .fa-arrow-right
-{
-   color: #f9004d;
-}
-
-/* fin */
-
-/* Pied de page */
-footer {
-    border-top: 5px solid #f9004d;
-    background-color: #000;
-    padding: 30px;
-    color: #f9004d;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-  }
-  footer .social-media{
-    display: flex;
-  }
-  footer .social-media p{
-    margin-right: 15px;
-    border: 1px solid #f9004d;
-    border-radius: 100%;
-    padding: 5px;
-    text-align:center;
-    width: 30px;
-    cursor:pointer;
-  }
-i {
-    color: #f9004d;
-}
-
-  /* Fin du pied de page */
+</body>
+</html>
