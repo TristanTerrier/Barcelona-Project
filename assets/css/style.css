@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --first-color: #97591a;
-    --primary-color: #633a11;
-    --second-color: #e3a76b;
-    --gray-color: #adacac;
-    --text-color: #0b0a0a;
-    --background-color: #fefefe;
-    --white-color: #fff;
+    --red-color: #fe1f00;
+    --background-color: #15151d;
+    --white-color: #fefefe;
 
     --very-small-size: 400 0.833rem/1.5 'Roboto', sans-serif;
     --small-size: 400 1rem/1.5 'Roboto', sans-serif;
     --medium-size: 400 1.2rem/1.5 'Roboto', sans-serif;
     --large-size: 500 1.44rem/1.5 'Roboto', sans-serif;
-    --very-large-size: 500 1.728rem/1.75 'Roboto', sans-serif;
-    --very-very-large-size: 700 2.074rem/1.75 'Roboto', sans-serif;
+    --very-large-size: 700 2.074rem/1.75 'Roboto', sans-serif;
+    --very-very-large-size: 800 2.5rem/1.75 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 a,
@@ -23,7 +23,7 @@ h1,
 h2,
 h3,
 h4 {
-    color: var(--text-color);
+    color: var(--white-color);
 }
 
 h1 {
@@ -52,13 +52,14 @@ a {
 }
 
 .btn {
-    background-color: var(--text-color);
-    padding: 10px 20px;
+    background-color: var(--red-color);
+    padding: 7px 20px;
     color: var(--white-color);
     font: var(--small-size);
     font-weight: 500;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--red-color);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 header {
@@ -80,6 +81,10 @@ header > .links > li {
 header .icon {
     height: 30px;
     width: auto;
+}
+
+#logo > img {
+    height: 40px;
 }
 
 header a {
@@ -104,7 +109,7 @@ header a {
     min-height: 1.5em;
     min-width: 1.5em;
     padding: 2px;
-    background-color: var(--text-color);
+    background-color: var(--red-color);
     color: var(--white-color);
     font: var(--very-small-size);
     line-height: 1.4;
@@ -166,6 +171,7 @@ section.grid {
     font: var(--large-size);
     font-size: 80px;
     font-weight: 800;
+    color: var(--white-color);
 }
 
 #discover > img {
@@ -212,8 +218,8 @@ section.grid {
 }
 
 #quantity_product {
-    background-color: var(--white-color);
-    color: var(--text-color);
+    background-color: var(--background-color);
+    color: var(--white-color);
 }
 
 .product.grid {
