@@ -42,6 +42,7 @@ header button{
 .cards{
   display:flex;
   flex-wrap:wrap;
+
 }
 .cards .card{
   margin-right: 20px;
