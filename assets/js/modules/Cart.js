@@ -2,7 +2,7 @@ export class Cart {
     constructor() {
         this.items = JSON.parse(localStorage.getItem('cart')) || []
         this.cart_icon = document.querySelector('.cart-icon > .number_in_cart')
-        console.log(this.items)
+        // this.clearCart(  )
     }
 
     addItem(product, quantity) {
@@ -17,15 +17,13 @@ export class Cart {
         this.saveCart()
     }
 
-    removeItem(product) {
-        const item = this.items.find((item, i) => {
-            item.product && item.product.id === product.id
-            return i
+    removeItem(productId) {
+        this.items.find((item, i) => {
+            if (item.product && item.product.id === parseInt(productId, 10)) {
+                this.items.splice(i, 1)
+                this.saveCart()
+            }
         })
-        if (item !== -1) {
-            this.items.splice(item, 1)
-            this.saveCart()
-        }
     }
 
     getItems() {

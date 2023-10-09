@@ -22,7 +22,9 @@ if (number_in_cart > 0) {
                         <p>Quantity : ${cart.quantity}</p>
                         <p>Total : ${cart.product.price * cart.quantity} €</p>
                     </div>
-                    <button class="remove_from_cart btn" >Delete</button>
+                    <button class="remove_from_cart btn" data-id="${
+                        cart.product.id
+                    }">Delete</button>
                 </div>
                 `
     })
@@ -42,9 +44,9 @@ if (number_in_cart > 0) {
     })
 
     const removeProductButtons = document.querySelectorAll('.remove_from_cart')
-    removeProductButtons.forEach((btn, i) => {
+    removeProductButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
-            myCart.removeItem(cartItems[i])
+            myCart.removeItem(btn.dataset.id)
             btn.parentElement.remove()
             myCart.setCheckout()
             if (myCart.setNumber() == 0) {
