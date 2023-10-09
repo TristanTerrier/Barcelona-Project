@@ -84,7 +84,8 @@ header .icon {
 }
 
 #logo > img {
-    height: 40px;
+    /* height: 40px; */
+    width: 150px; 
 }
 
 header a {
