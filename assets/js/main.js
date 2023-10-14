@@ -1,4 +1,6 @@
-import { Cart } from './modules/Cart.js'
+const menuBurger = document.querySelector('#menu-burger')
+const menuLinks = document.querySelector('.links-responsive')
 
-const myCart = new Cart()
-myCart.setNumber()
+menuBurger.addEventListener('click', () => {
+    menuLinks.classList.toggle('active')
+})
