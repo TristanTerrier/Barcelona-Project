@@ -1,8 +1,4 @@
-import { Cart } from './modules/Cart.js'
 import { Table } from './modules/Table.js'
-
-const myCart = new Cart()
-myCart.setNumber()
 
 const form = document.querySelector('form')
 const UsersTable = new Table('http://localhost:3000', 'users')

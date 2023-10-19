@@ -11,6 +11,7 @@ form.addEventListener('submit', (e) => {
         if (input.value == '') {
             pass = false
             error.innerHTML += '<li>Veuillez remplir le champs</li>'
+            error.style.display = 'block'
         }
     })
 

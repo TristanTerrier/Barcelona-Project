@@ -355,6 +355,63 @@ section.grid {
     width: 100px;
 }
 
+/* ---------------------- LOGIN,REGISTER,SHIPPING,PAYMENT ---------------------- */
+
+#login-container,
+#register-container,
+#shipping-container,
+#payment-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 50px;
+    border: var(--red-color) 2px solid;
+    border-radius: 25px;
+}
+#login-container input,
+#register-container input,
+#shipping-container input,
+#payment-container input {
+    padding: 10px 15px;
+    background-color: var(--background-color);
+    color: var(--white-color);
+    border: var(--red-color) 2px solid;
+    border-radius: 5px;
+    font: var(--small-size);
+}
+
+.rl_link {
+    color: var(--red-color);
+    text-decoration: underline;
+}
+
+.input-container.grid {
+    gap: 10px;
+}
+
+.input-container > ul {
+    display: none;
+}
+
+.input-container > label {
+    color: var(--white-color);
+    font: var(--small-size);
+}
+
+#login-container > h1,
+#register-container > h1,
+#payment-container > h1,
+#shipping-container > h1 {
+    text-align: center;
+}
+
+.input-container > ul > li {
+    font: var(--small-size);
+    color: var(--red-color);
+}
+
 @media (max-width: 768px) {
     header {
         padding: 20px 40px;
@@ -481,5 +538,14 @@ section.grid {
     .danger,
     .success {
         padding: 15px 30px;
+    }
+
+    #login-container,
+    #register-container,
+    #shipping-container,
+    #payment-container {
+        width: 100%;
+        height: 100vh;
+        border: none;
     }
 }
