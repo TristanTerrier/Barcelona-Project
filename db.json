@@ -1,78 +1,47 @@
 {
-  "products": [
-    {
-      "id": 1,
-      "name": "can 1",
-      "description": "can 1",
-      "price": 20,
-      "img": "canet1.jpg"
-    },
-    {
-      "id": 2,
-      "name": "can 2",
-      "description": "can 2",
-      "price": 20,
-      "img": "canet2.jpg"
-    },
-    {
-      "id": 3,
-      "name": "can 3",
-      "description": "can 3",
-      "price": 20,
-      "img": "canet3.jpg"
-    },
-    {
-      "id": 4,
-      "name": "can 4",
-      "description": "can 4",
-      "price": 20,
-      "img": "canet4.jpg"
-    },
-    {
-      "id": 5,
-      "name": "can 5",
-      "description": "can 5",
-      "price": 20,
-      "img": "canet5.jpg"
-    },
-    {
-      "id": 6,
-      "name": "can 6",
-      "description": "can 6",
-      "price": 20,
-      "img": "canet6.jpg"
-    }
-  ],
-  "users": [
-    {
-      "email": "zefzef@zefzoh",
-      "password": "oihoze",
-      "id": 1
-    },
-    {
-      "email": "zefzuef@efqiohqfezhoqhfei",
-      "password": "ihezefiohz",
-      "id": 2
-    },
-    {
-      "email": "azdajzoih@ezfuzf",
-      "password": "hiohh",
-      "id": 3
-    },
-    {
-      "email": "efzefezf@efzef",
-      "password": "uzifuz",
-      "id": 4
-    },
-    {
-      "email": "ezfhzoefh@zefz",
-      "password": "uiuizehf",
-      "id": 5
-    },
-    {
-      "email": "zfzzf@ezfzef",
-      "password": "zrrugef",
-      "id": 6
-    }
-  ]
+    "products": [
+        {
+            "id": 1,
+            "name": "can 1",
+            "description": "can 1",
+            "price": 20,
+            "img": "canet1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "can 2",
+            "description": "can 2",
+            "price": 20,
+            "img": "canet2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "can 3",
+            "description": "can 3",
+            "price": 20,
+            "img": "canet3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "can 4",
+            "description": "can 4",
+            "price": 20,
+            "img": "canet4.jpg"
+        },
+        {
+            "id": 5,
+            "name": "can 5",
+            "description": "can 5",
+            "price": 20,
+            "img": "canet5.jpg"
+        },
+        {
+            "id": 6,
+            "name": "can 6",
+            "description": "can 6",
+            "price": 20,
+            "img": "canet6.jpg"
+        }
+    ],
+    "users": []
 }

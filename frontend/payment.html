@@ -6,11 +6,34 @@
         <meta name="description" content="Description" />
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <script src="./assets/js/shipping.js" type="module" defer></script>
+        <script src="./assets/js/payment.js" type="module" defer></script>
         <script src="./assets/js/main.js" type="module" defer></script>
-        <title>F1 energyzer | Shipping</title>
+        <title>F1 energyzer | Payment</title>
     </head>
     <body>
-        <main id="cart" class="grid"></main>
+        <main id="cart" class="grid">
+            <div id="payment-container grid">
+                <h1>Payment</h1>
+                <div id="error-container"></div>
+                <form method="post">
+                    <div class="input-container">
+                        <label for="card_number">Card number</label>
+                        <input type="number" id="card_number" />
+                        <ul></ul>
+                    </div>
+                    <div class="input-container">
+                        <label for="expire">Expires on</label>
+                        <input type="text" id="expire" />
+                        <ul></ul>
+                    </div>
+                    <div class="input-container">
+                        <label for="secure_code">Security code</label>
+                        <input type="number" id="secure_code" />
+                        <ul></ul>
+                    </div>
+                    <button class="btn">Pay</button>
+                </form>
+            </div>
+        </main>
     </body>
 </html>
