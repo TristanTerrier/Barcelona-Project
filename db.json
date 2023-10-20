@@ -61,7 +61,7 @@
       "name": "Alpine",
       "description": "can 6",
       "price": 1.99,
-      "img": ""
+      "img": "canet9.jpg"
     },
     {
       "id": 10,
@@ -70,12 +70,11 @@
       "price": 2.49,
       "img": "canet10.jpg"
     }
-
   ],
   "users": [
     {
-      "email": "florian.dimbert@gmail.com",
-      "password": "razcuq-9qyFpe-cypmok",
+      "email": "billy.rogier@free.fr",
+      "password": "azerty",
       "id": 1
     }
   ]

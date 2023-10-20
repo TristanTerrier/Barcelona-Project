@@ -407,6 +407,13 @@ section.grid {
     text-align: center;
 }
 
+#login-container > #error-container,
+#register-container > #error-container,
+#payment-container > #error-container,
+#shipping-container > #error-container {
+    padding: 0;
+}
+
 .input-container > ul > li {
     font: var(--small-size);
     color: var(--red-color);

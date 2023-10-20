@@ -41,12 +41,16 @@ if (number_in_cart > 0) {
                 `
     })
 
+    const userShipping = sessionStorage.getItem('user')
+        ? './shipping.html'
+        : './login.html?cart=1'
+
     cartElt.innerHTML += `            
     <div class="checkout-container grid">
         <h1>Order summary</h1>
         <p class="number_of_item">Number of item : ${number_in_cart}</p>
         <p class="total">Total : ${myCart.getTotal()} €</p>
-        <a href='./shipping.html' id="checkout" class="btn">Checkout</a>
+        <a href='${userShipping}' id="checkout" class="btn">Checkout</a>
     </div>`
 
     const removeProductButtons = document.querySelectorAll('.remove_from_cart')
