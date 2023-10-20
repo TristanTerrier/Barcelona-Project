@@ -72,10 +72,5 @@
     }
   ],
   "users": [
-    {
-      "email": "billy.rogier@free.fr",
-      "password": "azerty",
-      "id": 1
-    }
   ]
 }
