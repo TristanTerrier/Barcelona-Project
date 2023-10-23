@@ -1,6 +1,6 @@
 # Energy Drink Project
 
-# To start if you want to see th
+## Getting started
 
-1. Install node.js
-2. 
+1. ```npm install json-server
+2. ```json-server --watch db.json
